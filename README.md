@@ -21,3 +21,13 @@ Features:
 
 Target Variable:  
 Happiness_Index 1-10  
+
+Um die Streamlit App zu starten enfach zunächst die Abhängigkeiten installieren
+
+pip install requierements.txt
+
+Um die App zu starten
+
+Streamlit run app.py
+
+
