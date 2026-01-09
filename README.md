@@ -28,6 +28,6 @@ pip install requierements.txt
 
 Um die App zu starten
 
-Streamlit run app.py
+streamlit run app.py
 
 
