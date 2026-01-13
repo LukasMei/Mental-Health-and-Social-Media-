@@ -8,6 +8,11 @@ from utils.helpers import load_data
 
 st.title("Mental Health and Social Media")
 
+st.subheader("Thema")
+st.write("Einfluss von Social Media auf die Mentale Gesundheit und das allgemeine Wohlbefinden")
+st.subheader("Forschungsfrage")
+st.write("Können wir die „Happiness“ eines Menschen aus seinem Social-Media- und Lifestyle-Verhalten vorhersagen?")
+
 
 
 def main():
@@ -27,6 +32,7 @@ def main():
 
     st.markdown("---")
     st.write("Datenquelle: Social Median and Mental Health Balance Dataset")
+    st.write("https://www.kaggle.com/datasets/ayeshaimran123/social-media-and-mental-health-balance")
 
 if __name__ == "__main__":
     main()
