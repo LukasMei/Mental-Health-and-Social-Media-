@@ -32,3 +32,5 @@ Happiness_Index 1-10
 
 ## To run the app
 
+`streamlit run app.py`
+
