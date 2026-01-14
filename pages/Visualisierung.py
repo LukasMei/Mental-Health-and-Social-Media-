@@ -16,7 +16,7 @@ sex_filter = st.sidebar.multiselect(
 )
 df = df[df["Gender"].isin(sex_filter)]
 
-tab1, tab2, tab3, tab4, tab5= st.tabs(["Histogramme", "Boxplot", "Korrelationsmatrix", "Scatterplot", "Erkenntnisse"])
+tab1, tab2, tab3, tab4= st.tabs(["Histogramme", "Boxplot", "Korrelationsmatrix", "Scatterplot"])
 
 
 with tab1:
@@ -47,23 +47,6 @@ with tab4:
     st.write("Tipp: Schaue dir die Features Daily Screen Time, Stress Level und Schlafqualität genauer an")
     show_scatterplot(df, feature_a, feature_b)
 
-with tab5:
-    st.header("Zentrale Erkenntnisse der Datenexploration")
-
-    st.markdown("""
-                
-    **1.**
-    - 
-
-    **2. Zusammenhang mit der Zielvariable**
-    - `Daily Screen Time` weist eine negative Beziehung zu `Happiness_Index` auf.
-                
-    **3. Korrelationen**
-    - Die Features Daily Screen Time, Sleep Quality und Stress Level weisen eine Korrelation von (|r| > 0.5) auf.
-
-    **4. Vorhersagbarkeit**
-    - Die Zielvariable weist Beziehungen zu den Features Daily Screen Time, Sleep Quality und Stress Level auf.
-    """)
 
     
 
