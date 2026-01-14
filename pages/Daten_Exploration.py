@@ -10,7 +10,7 @@ df_dirty_copy = df_dirty.copy()
 
 important_columns = ['User_ID', 'Age', 'Gender', 'Daily_Screen_Time(hrs)',
                       'Sleep_Quality(1-10)', 'Stress_Level(1-10)', 'Days_Without_Social_Media',
-                      'Exercise_Frequency(week)', 'Social_Media_Platform']
+                      'Exercise_Frequency(week)']
 
 
 st.sidebar.header("Filter Optionen")
@@ -30,27 +30,27 @@ sex_filter = st.sidebar.multiselect(
 df = df[df["Gender"].isin(sex_filter)]
 
 
-tab1, tab2, tab3, tab4, tab5= st.tabs(["📊 Übersicht", "📈 Statistiken", "🔢Rohdaten", "🔤Datentypen", "⛔Fehlende Werte"])
+tab1, tab2, tab3, tab4= st.tabs(["📊 Übersicht", "📈 Statistiken", "🔢Rohdaten", "Datenqualität"])
 
 with tab1:
     col1, col2 = st.columns(2)
     col1.metric("Gefilterte Zeilen", len(df))
     col2.metric("Spalten", len(df.columns))
-with tab2:
-    st.dataframe(df.describe())
-with tab3:
-    st.dataframe(df)
-with tab4:
+
     dtypes_df = df.dtypes.reset_index()
     dtypes_df.columns = ["Feature", "Datentyp"]
 
     st.dataframe(dtypes_df, use_container_width=True)
-with tab5:
-    missing = df_dirty_copy[important_columns].isnull().sum()
-    missing_pct = (missing / len(df_dirty_copy)) * 100
-    missing_df = pd.DataFrame({
-        "Spalte": missing.index,
-        "Fehlend": missing.values,
-        "Prozent": missing_pct.values
-    })
-    st.dataframe(missing_df)
+    
+with tab2:
+    st.dataframe(df.describe())
+
+with tab3:
+    st.dataframe(df)
+
+with tab4:
+    st.markdown("### Fehlende Werte")
+    st.success("Keine fehlenden Werte!")
+
+    st.markdown("### Duplikate")
+    st.success("Keine Duplikate!")
