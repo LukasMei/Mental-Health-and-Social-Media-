@@ -11,23 +11,24 @@ Dataset:
 https://www.kaggle.com/datasets/ayeshaimran123/social-media-and-mental-health-balance 
 
 Features: 
-• Daily_Screen_Time (hrs) 
-• Days_Without_Social_Media 
-• Sleep_Qualtiy 
-• Exercise_Frequency 
-• Stress_Level 
-• Social_Media_Platform 
-• Age, Gender 
+- Daily_Screen_Time (hrs)
+- Days_Without_Social_Media
+- Sleep_Qualtiy
+- Exercise_Frequency
+- Stress_Level
+- Social_Media_Platform
+- Age
+- Gender 
 
 Target Variable:  
 Happiness_Index 1-10  
 
-Um die Streamlit App zu starten enfach zunächst die Abhängigkeiten installieren
 
-pip install requierements.txt
+## Install instructions 
 
-Um die App zu starten
+`python -m venv .venv`
 
-streamlit run app.py
+`pip install requierements.txt`
 
+## To run the app
 
